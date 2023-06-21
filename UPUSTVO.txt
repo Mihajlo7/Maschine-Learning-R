@@ -1,0 +1,41 @@
+##########################################
+######## CISCENJE NEPOZNATIH VREDNOSTI ###
+
+- proveriti za char tipa da li imaju neke koje sadrze "","-" ili " ". Ako postoje zamenitih sa NA
+- Numeriscke NA zamena ili sa mean ili sa median u zavisnosti da li podleze normalnoj raspodeli
+- Kategoricke NA zamena sa onom koje ima najvise u data setu.
+
+#####
+
+- Kategoricke koje imaju jedinstvene vrednosti i nemaju prediktivnu moc se odbacuju na pocetku
+- Ukoliko postoji kategoricka sa vise vrednosti(od 5 do 10) gledati da se napravi nova kategorija koja ce sadrzati podskupove stare
+- Pretvoriti char u faktorske
+
+#### LINEAR REGRESION ####
+
+- Crta se ggplot za svaku nezavisnu promenljivu u odnosu na zavisnu pomocu geom_smooth(). Ako je linija paralelna sa x osom, odbacujemo promenljivu jer nije linearno zavisna
+od zavisne prom
+- Kategorcku koja nije dummy(ima 2 kategorije) i koja ne moze da se posatavi ordinalno - odbacujemo
+- Radimo korelacionu matricu
+
+***** ZA SVE ALGORITME SA IZLAZNOM KATEGORIJSKOM *******
+ Crta se ggplot proverava se da li postoji statisticka znacajna razlika izmedju izlaznih kategorija. Ako ne postoji odbacujemo
+** ovde moze da se korisit Man-Witni test za one koje nemaju normalnu raspodelu-wilcox.test(kategorija1,kategorija2)
+********************************************************
+#### CLASSIFICATION TREE ####
+
+- U principu idu sve kategoricke i numericke
+
+#### KNN #########
+
+- Pocetna prica ista
+- Idu samo numericke standardizovane kao i kategorijske koje su dummy ili koje se mogu postaviti ordinalno
+
+#### NAIVE BAYES #####
+
+- Ovde bi trebalo da idu diskretizovane numericke i sve kategoricke(* ovo nisam siguran ali poznavajuci neku osnovnu logiku algoritma mislim da je ovako)
+
+####### KMEANS ########
+- Ovde idu normalizovane numericke nekorelisane i kategoricke dummy i ordinalne kategoricke
+
+*Mogu se korisititi i neordinalne kategoricke promenljive pomocu kodiranja "one-hot", ali to nije radjeno na casu tako da ne treba!
